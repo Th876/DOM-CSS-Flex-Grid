@@ -32,10 +32,6 @@ document.querySelector('body').style.backgroundColor = "#fca311";
   pageColor();
 
   // Part 3
-// const favList = document.querySelector('#favorite-things');
-// const lastThing = document.querySelector('li:last-child');
-// const removeThing = favList.removeChild(lastThing);
-//More CONCISE
 
 function removeThing() {
 document.querySelector('#favorite-things > li:last-child').remove();
@@ -65,24 +61,12 @@ function removeCity() {
   //iterate through the li tags
   for(let i=0; i < listItems.length; i++) {
 
-    //if each data in the li element equates to 'Chicago'//ANOTHER WAY TO DO THIS??
     if(listItems[i].firstChild.data === 'Chicago') {
       races.removeChild(listItems[i])
     }
   }
 };
   removeCity();
-  // if (races.indexOf('chicago') !==-1){
-    // races.remove();
-  // }
-  // const listItems = document.querySelector('li');
-  // for(let i=0; i < races.length; i++) {
-    // if(races[i] !== 'Chicago') {
-      // return races[i]; 
-  // }
-
-//const races = document.querySelector('#past-races > li:nth-child(n+4)
-//races.remove(); 
 
   // Part 6
   //Let's add to DOM's Past Races list. Create a new <li>element, change the new <li>text to the name of a city, and append it to the Past Races list.
@@ -127,7 +111,7 @@ addBlog();
   // Part 8
   //When you reload the page, the script.jsfile loads a random DOM quote. Let's play with the included function (from above!). 
  
-  //Query select the #quote-titleID element and add a click event handler. That event handler should use the function randomQuotewhenever #quote-titleis clicked.
+  //Query select the #quote-titleID element and add a click event handler. That event handler should use the function randomQuote whenever #quote-title is clicked.
 
 const quote =  document.querySelector('#quote-title');
 quote.addEventListener("click", randomQuote);
